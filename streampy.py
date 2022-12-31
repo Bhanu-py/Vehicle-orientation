@@ -62,6 +62,7 @@ def predict(img_file):
                'Rear': 7,
                'Unknown': 8}
     # Label and score prediction based on pre-trained random forest model
+    model = load_model()
     pred = model.predict(input_arr)
     class_label = {i for i in classes if classes[i] == pred.argmax(axis=1)}
     proba = np.max(pred)
