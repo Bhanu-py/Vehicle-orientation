@@ -32,4 +32,4 @@ def add_new_last_layer(n_classes, fc_layer_size):
 if __name__ == '__main__':
     # model.summary()
     model = add_new_last_layer(n_classes=9, fc_layer_size=(224, 224, 3))
-    print(model.summary())
+#     print(model.summary())
