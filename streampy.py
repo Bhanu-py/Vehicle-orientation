@@ -48,7 +48,7 @@ def predict(img_file):
                                                            color_mode="rgb",
                                                            target_size=(224, 224),
                                                            interpolation="nearest", )
-    image_array = keras.preprocessing.image.image_utils.img_to_array(image)
+    image_array = tensorflow.keras.preprocessing.image.image_utils.img_to_array(image)
     image_array = keras.applications.inception_v3.preprocess_input(image_array, data_format=None)
     input_arr = np.array([image_array])  # Convert single image to a batch.
 
