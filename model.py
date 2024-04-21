@@ -3,7 +3,7 @@ from keras.applications.inception_v3 import InceptionV3
 from keras import Sequential, Model
 from keras.activations import softmax
 from keras.optimizers import Adam
-from keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from keras.layers import Dense, Activation, Flatten, Dropout, MaxPool2D
 
 
