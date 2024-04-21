@@ -1,5 +1,6 @@
 import streamlit as st
 import tensorflow
+from tensorflow.keras.preprocessing.image import load_img
 from PIL import Image
 import os
 import numpy as np
@@ -44,7 +45,7 @@ def predict(img_file):
     img = Image.open(img_file)
     new_img = np.asarray(img)
 
-    image = tensorflow.keras.utils.load_img(img_file,
+    image = load_img(img_file,
                                                            grayscale=False,
                                                            color_mode="rgb",
                                                            target_size=(224, 224),
