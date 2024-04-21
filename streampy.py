@@ -44,7 +44,7 @@ def predict(img_file):
     img = Image.open(img_file)
     new_img = np.asarray(img)
 
-    image = tf.keras.utils.load_img(img_file,
+    image = tensorflow.keras.utils.load_img(img_file,
                                                            grayscale=False,
                                                            color_mode="rgb",
                                                            target_size=(224, 224),
