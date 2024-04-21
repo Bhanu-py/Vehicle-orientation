@@ -3,7 +3,7 @@ from PIL import Image
 import os
 import numpy as np
 import keras
-from keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from keras.applications import inception_v3
 from model import add_new_last_layer
 
