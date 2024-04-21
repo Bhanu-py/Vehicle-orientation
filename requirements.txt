@@ -3,4 +3,3 @@ pandas
 keras
 Pillow
 tensorflow
-ImageDataGenerator
