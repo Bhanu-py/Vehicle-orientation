@@ -5,7 +5,8 @@ from PIL import Image
 import os
 import numpy as np
 import keras
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
+# from keras.preprocessing.image import load_img, img_to_array
+from keras.preprocessing.image import ImageDataGenerator
 from keras.applications import inception_v3
 from model import add_new_last_layer
 
@@ -27,7 +28,7 @@ else:
 # model = keras.models.load_model('model/model_optimized')
 ### By Weights
 
-@st.cache
+@st.cache_resource
 def load_model():
     model = add_new_last_layer(n_classes=9, fc_layer_size=(224, 224, 3))
     model.load_weights('top_model_weights.h5')
@@ -50,7 +51,7 @@ def predict(img_file):
                                                            color_mode="rgb",
                                                            target_size=(224, 224),
                                                            interpolation="nearest")
-    image_array = tensorflow.keras.preprocessing.image.image_utils.img_to_array(image)
+    image_array = keras.preprocessing.image.image_utils.img_to_array(image)
     image_array = keras.applications.inception_v3.preprocess_input(image_array, data_format=None)
     input_arr = np.array([image_array])  # Convert single image to a batch.
 

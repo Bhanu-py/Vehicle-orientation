@@ -1,5 +1,5 @@
 numpy
 pandas
-keras
+streamlit
 Pillow
-tensorflow
+tensorflow==2.12.0
